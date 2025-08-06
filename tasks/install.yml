@@ -12,7 +12,6 @@
   check_mode: false
 
 - name: Unpack uptime-kuma src archive
-  become: false
   ansible.builtin.unarchive:
     src: "/tmp/uptime_kuma_{{ uptime_kuma_version }}.tar.gz"
     dest: "{{ uptime_kuma_home }}"
@@ -35,7 +34,6 @@
   check_mode: false
 
 - name: Unpack uptime-kuma dist archive
-  become: false
   ansible.builtin.unarchive:
     src: "/tmp/uptime_kuma_{{ uptime_kuma_version }}_dist.tar.gz"
     dest: "{{ uptime_kuma_src }}"
