@@ -44,8 +44,6 @@
   check_mode: false
 
 - name: Install NPM dependencies
-  become: true
-  become_user: "{{ uptime_kuma_user }}"
   community.general.npm:
     path: "{{ uptime_kuma_src }}"
     production: true
